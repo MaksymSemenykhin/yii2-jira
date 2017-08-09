@@ -99,6 +99,7 @@ class Client extends Component
                        'Content-Type'=>'application/json',
                     ]]);
  			
+			
 			if (is_string($result)) {
 				$result = Json::decode($result);
 			}
@@ -109,6 +110,9 @@ class Client extends Component
 			$result = $e->getResponse()->getBody()->__toString();
 
 			$contentType = $e->getResponse()->getHeader('Content-Type');
+                        if(is_array($contentType))
+                            $contentType = array_shift($contentType);
+			
 			if (strpos($contentType, 'application/json') !== false)
 			{
 				$result = Json::decode($result);
