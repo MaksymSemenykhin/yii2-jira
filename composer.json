@@ -11,11 +11,11 @@
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": ">=2.0.0",
-        "maksymsemenykhin/yii2-httpclient": ">=1.1"
+        "maksymsemenykhin/yii2-httpclient": ">=1.2"
     },
     "autoload": {
         "psr-4": {
-            "MaksymSemenykhin\\jira\\": "src/"
+            "understeam\\jira\\": "src/"
         }
     }
 }
