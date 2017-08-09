@@ -93,7 +93,7 @@ class Client extends Component
 		try {
 			
                     $authString = base64_encode($this->username . ':' . $this->password);
-                    $result = $this->httpClient->request($method, $url ,'', ['headers'=>[
+                    $result = $this->httpClient->request($method, $url ,!empty($body)?$body:'', ['headers'=>[
                        'Authorization'=> "Basic " . $authString,
                        'Accept'=>'application/json',
                        'Content-Type'=>'application/json',
